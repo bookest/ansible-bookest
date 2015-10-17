@@ -14,6 +14,6 @@
       command: env EMACS=/usr/local/bin/emacs {{ ansible_env.HOME }}/.cask/bin/cask install
       args:
         chdir: "{{ ansible_env.HOME }}/.emacs.d"
-
-
-
+    - name: Install EVM
+      git: repo=https://github.com/rejeep/evm.git
+           dest={{ ansible_env.HOME }}/.evm

@@ -1,0 +1,19 @@
+---
+- hosts: all
+  tasks:
+    - homebrew: name=emacs install_options="with-cocoa" state=present
+    - command: brew linkapps
+    - name: Setup .emacs.d
+      git: repo=https://github.com/bookest/emacs.git
+           dest={{ ansible_env.HOME }}/.emacs.d
+           update=no
+    - name: Install cask
+      git: repo=https://github.com/cask/cask.git
+           dest={{ ansible_env.HOME }}/.cask
+    - name: Install Emacs packages
+      command: env EMACS=/usr/local/bin/emacs {{ ansible_env.HOME }}/.cask/bin/cask install
+      args:
+        chdir: "{{ ansible_env.HOME }}/.emacs.d"
+
+
+

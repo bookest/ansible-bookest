@@ -1,0 +1,10 @@
+---
+- hosts: all
+  tasks:
+    - name: Install my dot files
+      git: repo=https://github.com/bookest/dot_files.git
+           dest={{ ansible_env.HOME }}/.dot_files
+           update=no
+    - command: sh ./_make_links
+      args:
+        chdir: "{{ ansible_env.HOME }}/.dot_files"

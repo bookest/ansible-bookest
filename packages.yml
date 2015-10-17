@@ -1,0 +1,36 @@
+---
+- hosts: all
+  tasks:
+  - name: Install homebrew packages
+    homebrew: name={{ item }} state=present
+    with_items:
+      - awscli
+      - bash-completion
+      - docker
+      - docker-machine
+      - gimme
+      - haskell-stack
+      - htop-osx
+      - hub
+      - nvm
+      - packer
+      - pidof
+      - pwgen
+      - pyenv
+      - rbenv
+      - ruby-build
+      - the_silver_searcher
+      - tmux
+      - tree
+      - wget
+  - name: Install cask packages
+    homebrew_cask: name={{ item }} state=present
+    with_items:
+      - firefox
+      - google-chrome
+      - iterm2
+      - quicksilver
+      - spectacle
+      - spotify
+      - vagrant
+      - virtualbox

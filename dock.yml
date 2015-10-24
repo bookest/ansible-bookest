@@ -1,0 +1,10 @@
+---
+- hosts: all
+  tasks:
+    - homebrew: name=dockutil state=present
+    - name: Remove all persistent icons from the dock
+      command: dockutil --remove all
+    - name: Move the dock to the right side of the screen
+      shell: "if [ \"$(defaults write com.apple.dock orientation)\" != right ]; then defaults write com.apple.dock orientation right && killall Dock; fi"
+    - name: Hide the dock
+      shell: "if [ $(defaults read com.apple.dock autohide) -eq 0 ]; then defaults write com.apple.dock autohide -float 1 && killall Dock; fi"

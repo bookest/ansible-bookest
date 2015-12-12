@@ -28,7 +28,7 @@
       - tree
       - wget
   - name: Install aspell + en dictionary
-    homebrew: name=emacs install_options=--with-lang-en state=present
+    homebrew: name=aspell install_options=--with-lang-en state=present
   - name: Install cask packages
     homebrew_cask: name={{ item }} state=present
     with_items:

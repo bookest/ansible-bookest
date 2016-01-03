@@ -15,7 +15,6 @@
       - haskell-stack
       - htop-osx
       - hub
-      - nvm
       - packer
       - pidof
       - pwgen

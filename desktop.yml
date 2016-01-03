@@ -3,3 +3,4 @@
 - include: dot_files.yml
 - include: emacs.yml
 - include: dock.yml
+- include: nvm.yml

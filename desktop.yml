@@ -4,3 +4,4 @@
 - include: emacs.yml
 - include: dock.yml
 - include: nvm.yml
+- include: go.yml

@@ -1,0 +1,22 @@
+---
+- hosts: all
+  vars:
+    GOPATH: "{{ ansible_env.HOME }}/src/go"
+  tasks:
+    - name: Install Go
+      homebrew: name=go state=present
+    - name: Install Godep
+      homebrew: name=godep state=present
+    - name: Install Gimme
+      homebrew: name=gimme state=present
+    - name: Create GOPATH
+      file: path={{ GOPATH }} state=directory
+    - name: Install Go dev tools
+      command: go get {{ item }}
+      environment:
+        GOPATH: "{{ GOPATH }}"
+      with_items:
+        - github.com/kisielk/errcheck
+        - github.com/nsf/gocode
+        - github.com/rogpeppe/godef
+        - golang.org/x/tools/cmd/goimports

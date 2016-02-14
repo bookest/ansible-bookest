@@ -12,7 +12,7 @@
       - docker-machine
       - gibo
       - haskell-stack
-      - htop-osx
+      - htop
       - hub
       - packer
       - pidof

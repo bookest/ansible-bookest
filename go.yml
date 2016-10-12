@@ -9,6 +9,8 @@
       homebrew: name=godep state=present
     - name: Install Gimme
       homebrew: name=gimme state=present
+    - name: Install Glide
+      homebrew: name=glide state=present
     - name: Create GOPATH
       file: path={{ GOPATH }} state=directory
     - name: Install Go dev tools

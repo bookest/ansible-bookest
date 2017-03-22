@@ -8,8 +8,6 @@
     with_items:
       - awscli
       - bash-completion
-      - docker
-      - docker-machine
       - gibo
       - haskell-stack
       - htop
@@ -30,6 +28,7 @@
   - name: Install cask packages
     homebrew_cask: name={{ item }} state=present
     with_items:
+      - docker
       - firefox
       - google-chrome
       - iterm2

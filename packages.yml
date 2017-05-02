@@ -12,11 +12,14 @@
       - haskell-stack
       - htop
       - hub
+      - jq
       - packer
       - pidof
       - pwgen
       - pyenv
+      - pyenv-virtualenv
       - rbenv
+      - reattach-to-user-namespace
       - ruby-build
       - shellcheck
       - the_silver_searcher

@@ -25,6 +25,7 @@
       - the_silver_searcher
       - tmux
       - tree
+      - watch
       - wget
   - name: Install aspell + en dictionary
     homebrew: name=aspell install_options=--with-lang-en state=present

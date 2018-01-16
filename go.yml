@@ -14,7 +14,7 @@
     - name: Create GOPATH
       file: path={{ GOPATH }} state=directory
     - name: Install Go dev tools
-      command: go get {{ item }}
+      command: go get -u {{ item }}
       environment:
         GOPATH: "{{ GOPATH }}"
       with_items:

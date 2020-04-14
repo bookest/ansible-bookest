@@ -13,6 +13,7 @@
       - htop
       - hub
       - jq
+      - neovim
       - packer
       - pidof
       - pwgen

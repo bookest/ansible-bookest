@@ -8,6 +8,7 @@
     with_items:
       - awscli
       - bash-completion
+      - bluetoothconnector
       - gibo
       - haskell-stack
       - htop

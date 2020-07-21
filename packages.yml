@@ -14,6 +14,7 @@
       - haskell-stack
       - htop
       - hub
+      - inetutils
       - jq
       - neovim
       - packer

@@ -24,9 +24,9 @@
       - pyenv-virtualenv
       - rbenv
       - reattach-to-user-namespace
+      - ripgrep
       - ruby-build
       - shellcheck
-      - the_silver_searcher
       - tmux
       - tree
       - watch
